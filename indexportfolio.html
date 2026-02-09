@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Riyaz | Portfolio</title>  <!-- AOS Animation -->  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #0f172a; color: #e5e7eb; line-height: 1.6; }
+    a { color: #38bdf8; text-decoration: none; }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 20px;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .profile-pic:hover { transform: scale(1.1); }
+
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header h2 { font-size: 1.4rem; font-weight: 400; color: #94a3b8; }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 28px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #38bdf8, #6366f1);
+      color: #020617;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 25px rgba(99,102,241,0.5);
+    }
+
+    section { padding: 70px 12%; }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      border-left: 5px solid #38bdf8;
+      padding-left: 15px;
+    }
+
+    .about p { max-width: 800px; color: #cbd5f5; }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: transform 0.4s;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+
+    .card h3 { margin-bottom: 10px; color: #38bdf8; }
+
+    .project {
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 30px;
+      transition: transform 0.4s;
+    }
+
+    .project:hover { transform: scale(1.03); }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 60px 8%; }
+    }
+  </style></head>
+<body>  <!-- HERO -->  <header data-aos="fade-down">
+    <img src="mysuit.jpeg" alt="Profile" class="profile-pic">
+    <h1>Mohamed Riyaz</h1>
+    <h2>Computer Science Engineer | Data Science & SQL Enthusiast</h2>
+    <a href="#about" class="btn">Explore My Work</a>
+    <a href="download-resume-1.pdf" class="btn" style="margin-left:15px" download>Download Resume</a>
+  </header>  <!-- ABOUT -->  <section id="about" class="about" data-aos="fade-up">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a Computer Science Engineering graduate with practical experience in Python, SQL, and web development.
+      I enjoy working on real-world problems, building meaningful applications, and continuously upgrading my skills.
+      I have completed internships in AI and Front-End Development and built an end-to-end web-based project.
+    </p>
+  </section>  <!-- SKILLS -->  <section data-aos="zoom-in">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <p>Python, C, C++, SQL</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, Bootstrap</p>
+      </div>
+      <div class="card">
+        <h3>Databases</h3>
+        <p>Oracle SQL (10g, 11g, 12c)</p>
+      </div>
+      <div class="card">
+        <h3>Data Science</h3>
+        <p>Pandas, NumPy, Matplotlib</p>
+      </div>
+    </div>
+  </section>  <!-- PROJECTS -->  <section data-aos="fade-right">
+    <h2 class="section-title">Project</h2>
+    <div class="project">
+      <h3>Blood and Plasma Net: Linking Hospital with Donors</h3>
+      <p>
+        A web-based system designed to connect hospitals with blood and plasma donors efficiently.
+        The platform includes secure authentication, donor management, scheduling, and database integration.
+      </p>
+      <p><strong>Technologies:</strong> Java, HTML, CSS, Bootstrap, SQL</p>
+    </div>
+  </section>  <!-- CONTACT -->  <section>
+    <h2 class="section-title">Contact</h2>
+    <div class="card">
+      <p><strong>Name:</strong> Mohamed Riyaz</p>
+      <p><strong>Location:</strong> India</p>
+      <p><strong>Email:</strong> mohamedriyaz247@gmail.com</p>
+      <p><strong>GitHub:</strong> https://github.com/mohamedriyaz247</p>
+    </div>
+  </section>  <footer>
+    <p>© 2026 Mohamed Riyaz | Built with ❤️</p>
+  </footer>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script></body>
+</html>
