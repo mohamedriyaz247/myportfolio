@@ -1,158 +1,297 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mohamed Riyaz | Portfolio</title>  <!-- AOS Animation -->  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: #0f172a; color: #e5e7eb; line-height: 1.6; }
-    a { color: #38bdf8; text-decoration: none; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Riyaz | Portfolio</title>
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 4px solid #38bdf8;
-      margin-bottom: 20px;
-      object-fit: cover;
-      transition: transform 0.4s;
-    }
+body{
+    background:#000;
+    color:#fff;
+}
 
-    .profile-pic:hover { transform: scale(1.1); }
+/* HEADER */
+header{
+    text-align:center;
+    padding:80px 20px;
+}
 
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header h2 { font-size: 1.4rem; font-weight: 400; color: #94a3b8; }
+.profile-img{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #fff;
+}
 
-    .btn {
-      margin-top: 25px;
-      padding: 12px 28px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #38bdf8, #6366f1);
-      color: #020617;
-      font-weight: 600;
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: inline-block;
-    }
+h1{
+    font-size:2.5rem;
+    margin-top:20px;
+}
 
-    .btn:hover {
-      transform: scale(1.08);
-      box-shadow: 0 10px 25px rgba(99,102,241,0.5);
-    }
+.subtitle{
+    color:#aaa;
+    margin-top:10px;
+}
 
-    section { padding: 70px 12%; }
+/* SECTION */
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
 
-    .section-title {
-      font-size: 2rem;
-      margin-bottom: 40px;
-      border-left: 5px solid #38bdf8;
-      padding-left: 15px;
-    }
+h2{
+    text-align:center;
+    margin-bottom:40px;
+}
 
-    .about p { max-width: 800px; color: #cbd5f5; }
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
+/* FLIP CARD */
+.flip-card{
+    perspective:1000px;
+    height:200px;
+}
 
-    .card {
-      background: #020617;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      transition: transform 0.4s;
-    }
+.flip-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform 0.8s;
+    transform-style:preserve-3d;
+}
 
-    .card:hover { transform: translateY(-10px); }
+.flip-card:hover .flip-inner{
+    transform:rotateY(180deg);
+}
 
-    .card h3 { margin-bottom: 10px; color: #38bdf8; }
+.flip-front, .flip-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    backface-visibility:hidden;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
 
-    .project {
-      border: 1px solid #1e293b;
-      border-radius: 18px;
-      padding: 30px;
-      transition: transform 0.4s;
-    }
+/* FRONT SIDE WITH IMAGE + DARK OVERLAY */
+.flip-front{
+    position:relative;
+    font-size:1.3rem;
+    font-weight:bold;
+    background-size:cover;
+    background-position:center;
+    overflow:hidden;
+}
 
-    .project:hover { transform: scale(1.03); }
+.flip-front::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+    border-radius:10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: #020617;
-      color: #94a3b8;
-    }
+.flip-front span{
+    position:relative;
+    z-index:2;
+}
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      section { padding: 60px 8%; }
-    }
-  </style></head>
-<body>  <!-- HERO -->  <header data-aos="fade-down">
-    <img src="mysuit.jpeg" alt="Profile" class="profile-pic">
+/* Background Images */
+.programming{
+    background-image:url("programming.jpg");
+}
+
+.datalib{
+    background-image:url("datalib.jpg");
+}
+
+.tools{
+    background-image:url("tools.jpg");
+}
+
+.database{
+    background-image:url("database.jpg");
+}
+
+/* BACK SIDE PURE BLACK */
+.flip-back{
+    background:#000;
+    color:#fff;
+    transform:rotateY(180deg);
+    font-size:0.95rem;
+}
+
+/* PROJECT CARD */
+.project-card{
+    background:#111;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    background:#1a1a1a;
+}
+
+.project-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content a{
+    color:#00f0ff;
+    text-decoration:none;
+}
+
+/* CONTACT */
+.contact-box{
+    background:#111;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+    border-top:1px solid #111;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="mysuit.jpeg" alt="Mohamed Riyaz" class="profile-img">
     <h1>Mohamed Riyaz</h1>
-    <h2>Computer Science Engineer | Data Science & SQL Enthusiast</h2>
-    <a href="#about" class="btn">Explore My Work</a>
-    <a href="download-resume-1.pdf" class="btn" style="margin-left:15px" download>Download Resume</a>
-  </header>  <!-- ABOUT -->  <section id="about" class="about" data-aos="fade-up">
-    <h2 class="section-title">About Me</h2>
-    <p>
-      I am a Computer Science Engineering graduate with practical experience in Python, SQL, and web development.
-      I enjoy working on real-world problems, building meaningful applications, and continuously upgrading my skills.
-      I have completed internships in AI and Front-End Development and built an end-to-end web-based project.
-    </p>
-  </section>  <!-- SKILLS -->  <section data-aos="zoom-in">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-      <div class="card">
-        <h3>Programming</h3>
-        <p>Python, C, C++, SQL</p>
-      </div>
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>HTML, CSS, JavaScript, Bootstrap</p>
-      </div>
-      <div class="card">
-        <h3>Databases</h3>
-        <p>Oracle SQL (10g, 11g, 12c)</p>
-      </div>
-      <div class="card">
-        <h3>Data Science</h3>
-        <p>Pandas, NumPy, Matplotlib</p>
-      </div>
-    </div>
-  </section>  <!-- PROJECTS -->  <section data-aos="fade-right">
-    <h2 class="section-title">Project</h2>
-    <div class="project">
-      <h3>Blood and Plasma Net: Linking Hospital with Donors</h3>
-      <p>
-        A web-based system designed to connect hospitals with blood and plasma donors efficiently.
-        The platform includes secure authentication, donor management, scheduling, and database integration.
-      </p>
-      <p><strong>Technologies:</strong> Java, HTML, CSS, Bootstrap, SQL</p>
-    </div>
-  </section>  <!-- CONTACT -->  <section>
-    <h2 class="section-title">Contact</h2>
-    <div class="card">
-      <p><strong>Name:</strong> Mohamed Riyaz</p>
-      <p><strong>Location:</strong> India</p>
-      <p><strong>Email:</strong> mohamedriyaz247@gmail.com</p>
-      <p><strong>GitHub:</strong> https://github.com/mohamedriyaz247</p>
-    </div>
-  </section>  <footer>
-    <p>© 2026 Mohamed Riyaz | Built with ❤️</p>
-  </footer>  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script></body>
+    <div class="subtitle">Aspiring Data Analyst | Python | SQL | Power BI</div>
+</header>
 
+<section>
+<h2>Technical Skills</h2>
+
+<div class="grid">
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front programming">
+<span>Programming Languages</span>
+</div>
+<div class="flip-back">
+Python, C, C++, JavaScript, PHP, SQL
+</div>
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front datalib">
+<span>Data Libraries</span>
+</div>
+<div class="flip-back">
+Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+</div>
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front tools">
+<span>Tools</span>
+</div>
+<div class="flip-back">
+Power BI, Tableau, VS Code, Android Studio, Blender, Git & GitHub
+</div>
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front database">
+<span>Databases</span>
+</div>
+<div class="flip-back">
+Oracle SQL, MySQL
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Projects</h2>
+
+<div class="grid">
+
+<div class="project-card">
+<img src="calculator.jpg" alt="Calculator">
+<div class="project-content">
+<h3>Calculator Using Python</h3>
+<p>Built a command-line calculator using Python with arithmetic operations and user input handling.</p>
+<a href="https://github.com/mohamedriyaz247/Calculator-app.git" target="_blank">View on GitHub</a>
+</div>
+</div>
+
+<div class="project-card">
+<img src="Moving-Object-Detection.jpg" alt="OpenCV">
+<div class="project-content">
+<h3>Moving Object Detection (OpenCV)</h3>
+<p>Developed real-time moving object detection using Python & OpenCV with contour detection and bounding boxes.</p>
+<a href="https://github.com/mohamedriyaz247/Moving-Object-Detection.git" target="_blank">View on GitHub</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="contact-box">
+Email: mohamedriyaz247@gmail.com <br>
+Phone: +91 7358463694 <br>
+Location: Chennai, India
+</div>
+</section>
+
+<footer>
+© 2026 Mohamed Riyaz | Portfolio
+</footer>
+
+</body>
 </html>
+
