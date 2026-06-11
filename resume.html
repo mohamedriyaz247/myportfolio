@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume | Mohamed Riyaz</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#ddd2c6;
+    color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo span{
+    font-weight:400;
+    color:#666;
+    font-size:20px;
+}
+
+.menu a{
+    text-decoration:none;
+    margin-left:15px;
+    color:#ff5c00;
+    border:1px solid #ff5c00;
+    padding:10px 20px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#ff5c00;
+    color:white;
+}
+
+/* PAGE TITLE */
+
+.page-title{
+    text-align:center;
+    font-size:70px;
+    margin-top:60px;
+    margin-bottom:50px;
+    letter-spacing:3px;
+}
+
+/* SECTION */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:0 30px 80px;
+}
+
+.section-heading{
+    font-size:30px;
+    margin-bottom:20px;
+    margin-top:40px;
+}
+
+/* WHITE BOX */
+
+.resume-box{
+    background:white;
+    border-radius:15px;
+    padding:50px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.resume-box:hover{
+    transform:translateY(-5px);
+}
+
+/* EXPERIENCE */
+
+.experience-item{
+    display:flex;
+    gap:80px;
+    margin-bottom:60px;
+}
+
+.experience-item:last-child{
+    margin-bottom:0;
+}
+
+.left-side{
+    min-width:250px;
+}
+
+.year{
+    color:#4da6ff;
+    font-size:22px;
+    font-weight:bold;
+    display:block;
+    margin-bottom:10px;
+}
+
+.job-title{
+    font-size:25px;
+    font-weight:600;
+}
+
+.company{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.location{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.right-side ul{
+    padding-left:20px;
+}
+
+.right-side li{
+    margin-bottom:10px;
+    line-height:1.8;
+}
+
+/* EDUCATION */
+
+.education-grid{
+    display:flex;
+    justify-content:space-between;
+    gap:100px;
+}
+
+.edu-left{
+    width:60%;
+}
+
+.edu-right{
+    width:40%;
+}
+
+.edu-left h3{
+    margin-top:15px;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.edu-left p{
+    margin-bottom:15px;
+    line-height:1.7;
+}
+
+.edu-right{
+    line-height:2;
+    font-size:18px;
+}
+
+/* SKILLS */
+
+.skill-list{
+    list-style:none;
+}
+
+.skill-list li{
+    margin-bottom:20px;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.skill-list strong{
+    color:#111;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .experience-item{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .education-grid{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .edu-left,
+    .edu-right{
+        width:100%;
+    }
+
+    .page-title{
+        font-size:50px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        Mohamed Riyaz <span>/ DATA SCIENTIST</span>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">ABOUT ME</a>
+        <a href="resume.html">RESUME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+</nav>
+
+<!-- PAGE TITLE -->
+
+<h1 class="page-title">RESUME</h1>
+
+<div class="section">
+
+    <!-- WORK EXPERIENCE -->
+
+    <h2 class="section-heading">Work Experience</h2>
+
+    <div class="resume-box">
+
+        <div class="experience-item">
+
+            <div class="left-side">
+                <span class="year">2023 - 2023</span>
+                <h3 class="job-title">AI Intern</h3>
+            </div>
+
+            <div class="right-side">
+
+                <div class="company">
+                    Pantech Prolabs India Pvt Ltd
+                </div>
+
+                <div class="location">
+                    Chennai, Tamilnadu
+                </div>
+
+                <ul>
+                    <li>Developed and implemented AI models using Python for various projects.</li>
+
+                    <li>Collaborated with a team to design and optimize machine learning algorithms.</li>
+
+                    <li>Conducted data preprocessing, analysis, and visualization to enhance model performance.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="experience-item">
+
+            <div class="left-side">
+                <span class="year">2024 - 2024</span>
+                <h3 class="job-title">Front End Intern</h3>
+            </div>
+
+            <div class="right-side">
+
+                <div class="company">
+                    Edunet Foundation (AICTE)
+                </div>
+
+                <div class="location">
+                    Chennai, Tamilnadu
+                </div>
+
+                <ul>
+                    <li>Developed and implemented responsive web interfaces using HTML and CSS.</li>
+
+                    <li>Collaborated with design teams to enhance user experience.</li>
+
+                    <li>Learned and applied web development technologies including HTML and CSS to build and enhance web-based applications.</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- EDUCATION -->
+
+    <h2 class="section-heading">Education</h2>
+
+    <div class="resume-box">
+
+        <div class="education-grid">
+
+            <div class="edu-left">
+
+                <span class="year">2021 - 2025</span>
+
+                <h3>
+                    B S ABDUR RAHMAN CRESCENT
+                    INSTITUTE OF SCIENCE AND TECHNOLOGY
+                </h3>
+
+                <p>
+                    Bachelors of Technology in
+                </p>
+
+                <p>
+                    Computer Science and Engineering
+                </p>
+
+                <p>
+                    Chennai, Tamilnadu
+                </p>
+
+            </div>
+
+            <div class="edu-right">
+
+                <p>
+                    <strong>Cumulative GPA :</strong>
+                    6.54 / 10
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>Relevant Coursework :</strong>
+                    Machine Learning,
+                    Data Science Statistics,
+                    Big Data Analytics,
+                    Probability &
+                    Discrete Mathematics
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SKILLS -->
+
+    <h2 class="section-heading">Professional Skillset</h2>
+
+    <div class="resume-box">
+
+        <ul class="skill-list">
+
+            <li>
+                <strong>Programming:</strong>
+                Python (Pandas, NumPy, Matplotlib, Seaborn),
+                Scikit-learn
+            </li>
+
+            <li>
+                <strong>Machine Learning:</strong>
+                Supervised Learning (Linear, Logistic, Multiple Regression),
+                Model Evaluation
+            </li>
+
+            <li>
+                <strong>Data Analysis:</strong>
+                Data Cleaning,
+                Exploratory Data Analysis (EDA),
+                Data Visualization
+            </li>
+
+            <li>
+                <strong>Web Technologies:</strong>
+                HTML, CSS (basic frontend development)
+            </li>
+
+            <li>
+                <strong>Databases:</strong>
+                SQL (Oracle),
+                Data Querying and Manipulation
+            </li>
+
+            <li>
+                <strong>Tools:</strong>
+                Jupyter Notebook,
+                GitHub
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Mohamed Riyaz</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#ddd2c6;
+    color:#222;
+}
+
+/* NAVIGATION */
+
+nav{
+    width:100%;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 8%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    font-size:20px;
+    color:#666;
+    font-weight:400;
+}
+
+.menu a{
+    text-decoration:none;
+    margin-left:15px;
+    color:#ff5c00;
+    border:1px solid #ff5c00;
+    padding:10px 20px;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#ff5c00;
+    color:white;
+}
+
+/* HEADER */
+
+.page-title{
+    text-align:center;
+    font-size:70px;
+    margin-top:60px;
+    margin-bottom:10px;
+    letter-spacing:3px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    font-size:20px;
+    margin-bottom:50px;
+}
+
+/* PROJECT SECTION */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 30px 80px;
+}
+
+.project-box{
+    background:white;
+    border-radius:15px;
+    padding:45px;
+    margin-bottom:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.project-box:hover{
+    transform:translateY(-8px);
+}
+
+.project-grid{
+    display:flex;
+    gap:80px;
+}
+
+.project-left{
+    width:320px;
+}
+
+.project-title{
+    font-size:28px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.project-year{
+    color:#4da6ff;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.company{
+    color:#555;
+    font-size:18px;
+}
+
+.project-right{
+    flex:1;
+}
+
+.project-right ul{
+    padding-left:20px;
+}
+
+.project-right li{
+    line-height:1.9;
+    margin-bottom:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.project-grid{
+    flex-direction:column;
+    gap:25px;
+}
+
+.project-left{
+    width:100%;
+}
+
+.page-title{
+    font-size:50px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        Mohamed Riyaz <span>/ DATA SCIENTIST</span>
+    </div>
+
+    <div class="menu">
+        <a href="index.html">ABOUT ME</a>
+        <a href="resume.html">RESUME</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+
+</nav>
+
+<h1 class="page-title">PROJECTS</h1>
+
+<p class="subtitle">
+    Here are some projects that I worked on and currently working on.
+</p>
+
+<div class="container">
+
+    <!-- PROJECT 1 -->
+
+    <div class="project-box">
+
+        <div class="project-grid">
+
+            <div class="project-left">
+
+                <div class="project-title">
+                    Sentiment Analysis on IMDb Reviews
+                </div>
+
+                <div class="project-year">
+                    2026
+                </div>
+
+                <div class="company">
+                    Personal Project
+                </div>
+
+            </div>
+
+            <div class="project-right">
+
+                <ul>
+
+                    <li>Built a sentiment analysis model to classify IMDb movie reviews as positive or negative using Natural Language Processing (NLP) and Machine Learning techniques.</li>
+
+                    <li>Performed text preprocessing, stop-word removal, and TF-IDF vectorization to convert textual data into machine-readable features.</li>
+
+                    <li>Trained and evaluated machine learning models for sentiment prediction and tested the model using real review samples.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT 2 -->
+
+    <div class="project-box">
+
+        <div class="project-grid">
+
+            <div class="project-left">
+
+                <div class="project-title">
+                    Moving Object Detection Using Python
+                </div>
+
+                <div class="project-year">
+                    2023
+                </div>
+
+                <div class="company">
+                    Pantech Solutions Pvt Ltd
+                </div>
+
+            </div>
+
+            <div class="project-right">
+
+                <ul>
+
+                    <li>Moving Object Detection using Python & OpenCV – Successfully developed a real-time object detection system during an AI internship at Pantech Prolabs.</li>
+
+                    <li>Utilized pre-trained models like OpenCV to detect and track moving objects in video streams.</li>
+
+                    <li>Implemented background subtraction, contour analysis, and bounding box rendering.</li>
+
+                    <li>Focused on system optimization, model integration, and real-time processing.</li>
+
+                    <li>Gained hands-on experience in computer vision, deep learning concepts, and performance tuning for resource-constrained environments.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT 3 -->
+
+    <div class="project-box">
+
+        <div class="project-grid">
+
+            <div class="project-left">
+
+                <div class="project-title">
+                    Cloning Website (Hotstar)
+                </div>
+
+                <div class="project-year">
+                    2024
+                </div>
+
+                <div class="company">
+                    AICTE
+                </div>
+
+            </div>
+
+            <div class="project-right">
+
+                <ul>
+
+                    <li>This internship involved a comprehensive study of front-end development and practical application through the cloning of the Disney+ Hotstar website.</li>
+
+                    <li>The project emphasized understanding modern web technologies and implementing industry standards to replicate an existing website's design and functionality.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
